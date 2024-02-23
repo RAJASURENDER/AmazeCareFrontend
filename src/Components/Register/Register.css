@@ -1,0 +1,228 @@
+﻿.register-page {
+    background-image: url('../../../public/images/frame-medical-equipment-desk.jpg');
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 56px;
+    font-family: 'Raleway', sans-serif;
+    background-size: Cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.divregister {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.form-control {
+    display: flex;
+    padding: 10px 5px;
+    background-color: #ffffff;
+}
+
+span {
+    display: block;
+    color: Red;
+    font-size: 1rem;
+}
+
+.Register-navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px;
+
+}
+
+.Register-navbar-brand img {
+    width: 15%;
+    height: 30px;
+    padding-left: 20px;
+}
+
+
+.Register-navbar-nav {
+    margin-right: 3%;
+    margin-left: auto;
+    position: relative;
+    
+}
+
+
+
+.register-button {
+    background: #fc3955;
+    color: #ffffff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 200px;
+    padding: 2%;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.register-button:hover {
+    background-color: #00BCD4;
+    transition-duration: 2s;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    border: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.register-container {
+    padding: 3em;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    padding-bottom: 3%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 2%;
+}
+
+
+.heading-tag-h1 {
+    color: #0d99cc;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-bottom: 3%;
+    font-family: 'Comic Sans MS (cursive)';
+}
+
+p.w3l-register-p {
+    color: Black;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2em;
+}
+
+
+@media(max-width:768px) {
+    h1 {
+        font-size: 47px;
+    }
+    .form-group label {
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 27px;
+    }
+}
+
+@media(max-width:667px) {
+    h1 {
+        font-size: 45px;
+    }
+    .form-group label {
+        font-size: 1.4rem;
+    }
+    h2{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:640px) {
+
+    h1 {
+        font-size: 43px;
+    }
+    .form-group label {
+        font-size: 1.3rem;
+    }
+    h2{
+        font-size: 23px;
+    }
+}
+
+@media(max-width:568px) {
+    h1 {
+        font-size: 40px;
+    }
+    .form-group label {
+        font-size: 1.2rem;
+    }
+    h2{
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:480px) {
+    .w3l-login-form {
+        margin: 0 3vw;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+    .form-group label {
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 28px;
+    }
+
+}
+
+@media(max-width:414px) {
+    h1 {
+        font-size: 34px;
+    }
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    h2{
+        font-size: 24px;
+    }
+}
+
+@media(max-width:384px) {
+    h1 {
+        font-size: 30px;
+    }
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:320px) {
+    h1 {
+        font-size: 25px;
+    }
+    .form-group label {
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size:15px;
+    }
+}
