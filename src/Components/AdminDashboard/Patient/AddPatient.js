@@ -1,10 +1,12 @@
-import  { useState } from "react"; // Importing React and useState hook
+import { useState, useEffect } from "react"; // Importing React and useState hook
 import axios from 'axios'; // Importing axios for API requests
-// import './Register.css';
-import {Link} from "react-router-dom";
+import '../../Register/Register.css';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+
+const role = sessionStorage.getItem('username');
 
 // Defining the Register component
-function Register() {
+function AddPatient() {
     // State variables for form inputs
     // const keyword, setusername etc is Setter function of React Hook usestate, [username, setUsername]: This syntax is called array destructuring,
     const [username, setUsername] = useState(""); // this line of code is declaring a state variable username with an initial value of an empty string, and a setter function setUsername that can be used to update the username state. and same goes for Every variables
@@ -23,6 +25,7 @@ function Register() {
     const [genderError, setGenderError] = useState("");
     const [dateOfBirthError, setDateOfBirthError] = useState("");
     const [contactNumberError, setContactNumberError] = useState("");
+    const [showLinks, setShowLinks] = useState(false);
 
     // Function to validate username input
     const validateUsername = () => {
@@ -60,7 +63,7 @@ function Register() {
     }
 
     // Function to handle user registration
-    const register = async () => {
+    const AddPatient = async () => {
         validateUsername();
         validatePassword();
         validatePatientName();
@@ -69,15 +72,23 @@ function Register() {
         validateDateOfBirth();
         validateContactNumber();
 
+        // Check if any field has an error
+        //If the condition is true, return; is called, which exits This means that if there are any errors 
+        //in the form any error messages are displayed and it stop the registration process till the errors are fixed
 
         if (usernameError || passwordError || patientNameError || ageError || genderError || dateOfBirthError || contactNumberError) {
             return;
         }
+        else if (role != 'Admin') {
+            alert("UnAuthorized");
+            return;
+        }
 
+        // Construct patient object with form data
         const patient = {
             username: username,
             password: password,
-            role: "Patient",
+            role: "Patient", // Role is hardcoded to "Patient"
             patientName: patientName,
             age: age,
             gender: gender,
@@ -85,33 +96,60 @@ function Register() {
             contactNumber: contactNumber
         };
 
-
+        // Log patient object to console
         console.log(patient);
 
+        // Send API request to register user
         try {
             const response = await axios.post("http://localhost:5244/RegisterPatient", patient);
 
             console.log(response);
-            alert("Registration successful!"); // Display success message
-            window.location.href = "/login"; // Redirect to patient dashboard
+            alert("Patient Added Successfully!"); // Display success message
+            window.location.href = "/admin-dashboard"; // Redirect to patient dashboard
         } catch (error) {
             console.log(error);
-            alert("Registration failed. Please try again."); // Display error message
+            alert("Adding failed. Please try again."); // Display error message
         }
     };
-    
-    return (
 
-        <div className="register-page">
+    const handleLogout = () => {
+        if (window.confirm('Are you sure you want to Logout?')) {
+            window.location.href = "/";
+        }
+    }
+
+    const toggleNavbar = () => {
+        setShowLinks(!showLinks);
+    };
+
+
+
+    return (
+        <div className='Update-Doctor'>
             <nav className="navbarr">
-                <a className="navbar-brand" href="/">
+                <a className="navbar-brand" href="/admin-dashboard">
                     <img src="images/logo-no-background.png" className="img-fluid" alt="AMAZLogo" width="200" height="200" />
                 </a>
+                <div className="links">
+                    <button className="toggle-button" onClick={toggleNavbar}></button>
+                    <div className={`navbar-links ${showLinks ? "show" : ""}`}>
+                        <Link to="/toDoctors">Doctors</Link>
+                        <Link to="/toAdminViewAppointments">Appointments</Link>
+                        <Link to="/toPatientInfoAdmin">Patients</Link>
+                        <Link onClick={handleLogout}><i className="fas fa-sign-out-alt"></i><strong> Logout </strong></Link>
+                    </div>
+                </div>
             </nav>
+ 
+            <div className='Update-Container'>
+                <div className="divUpdate ">
+                    <h1 className="update-h1"><strong>Add Patient</strong></h1>
 
-            <div className="register-container">
-                <div className="alert alert-success divregister">
-                    <h1 className="heading-tag-h1"><strong>Sign Up</strong></h1>
+
+                    {/* Username input field */}
+                    {/* onBlur={validateUsername} This is used  to call the validate function when the field loses focus */}
+                    {/* onChange={(e) => setUsername(e.target.value)} It is  used to update the state of username when a change occurs in the input field. The value entered by User */}
+
                     <div className="form-group">
                         <label><i className="fa-solid fa-hospital-user"></i> Username</label>
                         <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)} onBlur={validateUsername} />
@@ -161,13 +199,11 @@ function Register() {
                     </div>
                     {/* Register button */}
 
-                    <button type="submit" className="register-button" onClick={register}>Register</button>
-                    <p className="w3l-register-p">Already have an account?<Link to='/login'> Login</Link></p>
+                    <button type="submit" className="register-button" onClick={AddPatient}>Add Patient</button>
                 </div>
-
             </div>
         </div>
     );
 }
 
-export default Register;
+export default AddPatient;

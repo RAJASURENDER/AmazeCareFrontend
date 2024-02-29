@@ -1,0 +1,109 @@
+.appointment-page {
+    background-image: url('../../../../public/images/appointment.avif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.appointments-box h2 {
+    margin-bottom: 25px;
+}
+
+
+.filter-dropdown {
+    margin-bottom: 40px;
+}
+
+    .filter-dropdown label {
+        margin-right: 10px;
+    }
+
+    .filter-dropdown select {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+.date-time-picker-container {
+    width: 50%;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker-wrapper {
+    display: block;
+}
+
+.react-datepicker {
+    font-family: Arial, sans-serif;
+}
+
+.react-datepicker__header {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 2px;
+    border-radius: 50%;
+}
+
+.react-datepicker__current-month {
+    font-weight: bold;
+}
+
+.react-datepicker__time-list-item {
+    padding: 8px 10px;
+}
+
+.react-datepicker__time-list {
+    padding: 0;
+}
+
+.react-datepicker__time-container {
+    float: left;
+    margin-right: 20px;
+}
+
+
+
+@media (max-width: 1199.5px) {
+    .appointments-box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 991px) {
+    .appointments-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .appointments-box {
+        width: 95%;
+    }
+}
+
+@media (max-width: 360px) {
+    .appointments-box {
+        width: 100%;
+    }
+}

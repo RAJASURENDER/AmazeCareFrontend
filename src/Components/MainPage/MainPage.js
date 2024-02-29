@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './MainPage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const YourComponent = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleNavbar = () => {
+        setIsOpen(!isOpen);
+    };
     return (
         <div>
             {/* Navbar Start */}
@@ -12,12 +20,10 @@ const YourComponent = () => {
                         <a className="navbar-brand" href="/">
                             <img src="images/logo-no-background.png" className="img-fluid" width="200" height="200" alt="Logo" />
                         </a>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
-                            <i className="fa-solid fa-bars-staggered navbar-toggler-icon"></i>
+                        <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
+                            <FontAwesomeIcon icon={faBars} style={{ color: "#1767cf" }}/>
                         </button>
-                        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <div className={`collapse navbar-collapse justify-content-end ${isOpen ? 'show' : ''}`}>
                             <ul className="navbar-nav menu-navbar-nav">
                                 <li className="nav-item">
                                     <a className="nav-link active" aria-current="page" href="#home">Home</a>

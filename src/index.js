@@ -4,12 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import Register from './Components/Register/Register';
 import App from './App';
+// import Patient from './Components/AdminDashboard/Patients/Patient';
 // import Login from './Components/Login/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <App/>
+      {/* <Patient/> */}
   
   </React.StrictMode>
 );

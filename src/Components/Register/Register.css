@@ -19,42 +19,16 @@
 }
 
 .form-control {
-    display: flex;
+   /* display: flex;*/
     padding: 10px 5px;
     background-color: #ffffff;
 }
 
-span {
+.text-danger {
     display: block;
     color: Red;
     font-size: 1rem;
 }
-
-.Register-navbar{
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 15px;
-
-}
-
-.Register-navbar-brand img {
-    width: 15%;
-    height: 30px;
-    padding-left: 20px;
-}
-
-
-.Register-navbar-nav {
-    margin-right: 3%;
-    margin-left: auto;
-    position: relative;
-    
-}
-
 
 
 .register-button {
@@ -123,6 +97,25 @@ p.w3l-register-p {
     margin-top: 2em;
 }
 
+.navbarr {
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbarr img {
+    max-height: 30px;
+    margin-left: 10px;
+}
+
+
 
 @media(max-width:768px) {
     h1 {
@@ -134,6 +127,7 @@ p.w3l-register-p {
     h2{
         font-size: 27px;
     }
+    
 }
 
 @media(max-width:667px) {
@@ -225,4 +219,52 @@ p.w3l-register-p {
     h2{
         font-size:15px;
     }
+}
+
+
+.Update-Doctor {
+    background-image: url('../../../public/images/frame-medical-equipment-desk.jpg');
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 56px;
+    font-family: 'Raleway', sans-serif;
+    background-size: Cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.Update-Container {
+    padding: 3em;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: black;
+    background: transparent;
+}
+
+.divUpdate {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6117647058823529);
+}
+
+.update-h1 {
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 3%;
+}
+
+.divUpdate label {
+    color: white;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 2%;
 }
