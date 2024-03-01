@@ -220,7 +220,10 @@ const PAppointment = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {renderAppointments.map(appointment => (
+
+                            {
+                                filteredAppointments.length > 0 ? (
+                                    renderAppointments.map(appointment => (
                                 <tr key={appointment.appointmentId}>
                                     <td>{appointment.appointmentId}</td>
                                     <td>{appointment.doctorName}</td>
@@ -247,7 +250,11 @@ const PAppointment = () => {
 
                                    
                                 </tr>
-                            ))}
+                                    ))) : (
+                                    <tr>
+                                        <td colSpan="8" className="text-center">No Appointments  found</td>
+                                    </tr>
+                                )}
                         </tbody>
                     </table>
                 </div>

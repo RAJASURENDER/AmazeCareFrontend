@@ -102,7 +102,9 @@ const MedicalRecords = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {rendermedicalRecords.map(record => (
+                            {
+                                rendermedicalRecords.length > 0 ? (
+                                    rendermedicalRecords.map(record => (
                                 <tr key={record.recordId}>
                                     <td>{record.recordId}</td>
                                     <td>{record.appointmentId}</td>
@@ -118,7 +120,11 @@ const MedicalRecords = () => {
                                         
                                     </td>
                                 </tr>
-                            ))}
+                                    ))) : (
+                                    <tr>
+                                        <td colSpan="8" className="text-center">No Medical Records found</td>
+                                    </tr>
+                                )}
                         </tbody>
                     </table>
                 </div>

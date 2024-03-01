@@ -176,7 +176,9 @@ const Doctors = () => {
                         </thead>
                       
                         <tbody>
-                            {renderDoctors.map(doctor => (
+                            {
+                                renderDoctors.length > 0 ? (
+                                    renderDoctors.map(doctor => (
                                     <tr key={doctor.doctorId}>
                                         <td>{doctor.doctorId}</td>
                                         <td>{doctor.doctorName}</td>
@@ -192,7 +194,11 @@ const Doctors = () => {
                                             </Link>
                                        </td>
                                 </tr>
-                            ))}
+                                    ))) : (
+                                    <tr>
+                                        <td colSpan="8" className="text-center">No Doctors found</td>
+                                    </tr>
+                                )}
                         </tbody>
                     </table>
                 </div>

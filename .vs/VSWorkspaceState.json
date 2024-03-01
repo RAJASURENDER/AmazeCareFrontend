@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\Components",
-    "\\src\\Components\\AdminDashboard\\Appointments",
-    "\\src\\Components\\DoctorDashboard\\MedicalRecords",
-    "\\src\\Components\\DoctorDashboard\\MedicalRecords\\PrescriptionByRecord",
+    "\\src\\Components\\AdminDashboard\\Doctors",
     "\\src\\Components\\DoctorDashboard\\ViewDoctorAppointments",
     "\\src\\Components\\DoctorDashboard\\ViewDoctorAppointments\\WriteMedicalRecords",
     "\\src\\Components\\PatientDashboard",
-    "\\src\\Components\\PatientDashboard\\ViewAppointments"
+    "\\src\\Components\\PatientDashboard\\ViewAllDoctors",
+    "\\src\\Components\\PatientDashboard\\ViewAppointments",
+    "\\src\\Components\\PatientDashboard\\ViewMedicalRecords"
   ],
-  "SelectedNode": "\\src\\Components\\PatientDashboard.zip",
+  "SelectedNode": "\\src\\Components\\PatientDashboard\\ViewAppointments\\ViewAppointments.js",
   "PreviewInSolutionExplorer": false
 }

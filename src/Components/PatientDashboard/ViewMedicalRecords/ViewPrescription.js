@@ -61,11 +61,13 @@ const ViewPrescriptionDetails = () => {
                                 <th scope="col">Medicine</th>
                                 <th scope="col">Instructions</th>
                                 <th scope="col">Dosage</th>
-                              {/*  <th scope="col">Actions</th>*/}
+                           
                             </tr>
                         </thead>
                         <tbody>
-                            {prescriptions.map(prescription => (
+                            {
+                                prescriptions.length > 0 ? (
+                                    prescriptions.map(prescription => (
                                 <tr key={prescription.prescriptionId}>
                                     <td>{prescription.recordId}</td>
                                     <td>{prescription.prescriptionId}</td>
@@ -73,13 +75,13 @@ const ViewPrescriptionDetails = () => {
                                     <td>{prescription.medicine}</td>
                                     <td>{prescription.instructions}</td>
                                     <td>{prescription.dosage}</td>
-                                    {/*<td>*/}
-                                    {/*    <Link to={`/`} className="btn btn-info">*/}
-                                    {/*        View Prescription Details*/}
-                                    {/*    </Link>*/}
-                                    {/*</td>*/}
+                                   
                                 </tr>
-                            ))}
+                                    ))) : (
+                                    <tr>
+                                        <td colSpan="8" className="text-center">No Prescriptions found</td>
+                                    </tr>
+                                )}
                         </tbody>
                     </table>
                 </div>
