@@ -3,14 +3,15 @@
     "",
     "\\src",
     "\\src\\Components",
-    "\\src\\Components\\AdminDashboard\\Doctors",
     "\\src\\Components\\DoctorDashboard\\ViewDoctorAppointments",
     "\\src\\Components\\DoctorDashboard\\ViewDoctorAppointments\\WriteMedicalRecords",
+    "\\src\\Components\\MainPage",
     "\\src\\Components\\PatientDashboard",
     "\\src\\Components\\PatientDashboard\\ViewAllDoctors",
     "\\src\\Components\\PatientDashboard\\ViewAppointments",
-    "\\src\\Components\\PatientDashboard\\ViewMedicalRecords"
+    "\\src\\Components\\PatientDashboard\\ViewMedicalRecords",
+    "\\src\\Components\\Register"
   ],
-  "SelectedNode": "\\src\\Components\\PatientDashboard\\ViewAppointments\\ViewAppointments.js",
+  "SelectedNode": "\\src\\Components\\MainPage\\MainPage.js",
   "PreviewInSolutionExplorer": false
 }
