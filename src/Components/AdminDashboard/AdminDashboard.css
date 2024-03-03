@@ -1,0 +1,96 @@
+.AdminDashboard {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://aihms.in/blog/wp-content/uploads/2020/04/healthcare1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+.x{
+    margin-right:15px
+}
+
+/* Patient Section Styles */
+.Admin-section {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dashboard-container {
+    margin-left: 17%;
+    width: 80%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.logout {
+    cursor: pointer;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.Admin-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:85%;
+}
+
+.dashboard-heading-tag {
+    text-align: center;
+    margin-bottom: 40px;
+    color: navy;
+}
+
+.logout{
+    
+}
+
+@media (max-width: 1199.5px) {
+    .container {
+        padding: 10px;
+    }
+
+    .Admin-box {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding: 10px;
+    }
+
+    .Admin-box {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 5px;
+    }
+
+    .Admin-box {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 5px;
+    }
+
+    .Admin-box {
+        padding: 5px;
+    }
+}
