@@ -1,0 +1,63 @@
+﻿
+
+.bookappointment-page {
+    background-image: url('../../../../../public/images/admindash.jpg');
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 56px;
+    font-family: 'Raleway', sans-serif;
+    background-size: Cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.bookappointment-container {
+    padding: 3em;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: black;
+    background:transparent;
+}
+
+.bookappointments-box {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6117647058823529);
+}
+.bookappointments-box label{
+    color: white;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 2%;
+}
+
+.book-appointment-button{
+    width:100%;
+}
+@media (max-width: 1199.5px) {
+    .bookappointments-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .bookappointments-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .bookappointments-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .bookappointments-box {
+        width: 100%;
+    }
+}
