@@ -1,0 +1,139 @@
+﻿.PatientDashboard {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../../../public/images/flat-lay-medical-desk-arrangement-with-copy-space-green-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* Navigation Bar Styles */
+.navbarr {
+    background-color: #fff;
+    padding: 15px;
+    left: 0;
+   
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-brand{
+    margin-left :-10%;
+}
+.float-right {
+    margin-left: 78%;
+    padding:7px;
+}
+.navbar img {
+    height: 30px;
+    margin-left: 20%;
+}
+
+/* Patient Section Styles */
+.patient-section {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.patient-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* styles.css */
+
+.button-spacing {
+    margin-right: 15px; /* Adjust the margin as needed */
+}
+
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+    color:navy;
+}
+.filter-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-container label {
+    margin-right: 10px;
+    padding: 1%;
+}
+
+.filter-container select {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    flex: 2/3 auto; 
+}
+
+.filter-container button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-container button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+@media (max-width: 1199.5px) {
+    .container {
+        padding: 10px;
+    }
+
+    .patient-box {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding: 10px;
+    }
+
+    .patient-box {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 5px;
+    }
+
+    .patient-box {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 5px;
+    }
+
+    .patient-box {
+        padding: 5px;
+    }
+}
